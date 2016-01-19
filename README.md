@@ -7,3 +7,34 @@
 # react-ref-decorator
 
  > An ES7 decorator for reffing and unreffing objects (anything that implements .ref() and .unref()) in the componentWillMount() and componentWillUnmount()
+
+## Example
+
+Lets say you have some object that needs to be tied to the mounted portion of a React component's lifecycle:
+
+```javascript
+const componentWatcher = {
+  ref() {
+    // do something when the component mounts
+  }
+  
+  unref() {
+    // do something else when the component unmounts
+  }
+};
+```
+
+You can attach it like this:
+
+```javascript
+@Ref(componentWatcher)
+class MyComponent extends Component {
+  render() {
+    return (
+      <h1>Blah</h1>
+    );
+  }
+}
+```
+
+Now when the component mounts and unmounts your componentWatchers ref/unref functions will be called respectively.
