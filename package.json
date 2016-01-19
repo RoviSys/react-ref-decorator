@@ -1,8 +1,8 @@
 {
   "name": "react-ref-decorator",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An ES7 decorator for reffing and unreffing objects (anything that implements .ref() and .unref()) in the componentWillMount() and componentWillUnmount()",
-  "main": "dist/react-ref-decorator.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "gulp",
     "lint": "gulp lint",
@@ -60,7 +60,7 @@
     "webpack-stream": "^3.1.0"
   },
   "babelBoilerplateOptions": {
-    "entryFileName": "react-ref-decorator",
+    "entryFileName": "index",
     "mainVarName": "Ref"
   },
   "dependencies": {
