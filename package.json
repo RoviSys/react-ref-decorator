@@ -9,7 +9,8 @@
     "test-browser": "gulp test-browser",
     "watch": "gulp watch",
     "build": "gulp build",
-    "coverage": "gulp coverage"
+    "coverage": "gulp coverage",
+    "release": "./node_modules/.bin/release-it -p -u -n"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "isparta": "^4.0.0",
     "json-loader": "^0.5.3",
     "mocha": "^2.3.4",
+    "release-it": "^2.3.1",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
     "vinyl-source-stream": "^1.1.0",
