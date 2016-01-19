@@ -31,7 +31,24 @@ const componentWatcher = {
 You can attach it like this:
 
 ```javascript
+import Ref from 'react-ref-decorator';
+
 @Ref(componentWatcher)
+class MyComponent extends Component {
+  render() {
+    return (
+      <h1>Blah</h1>
+    );
+  }
+}
+```
+
+The decorator also supports multiple 'reffable' arguments:
+ 
+```javascript
+import Ref from 'react-ref-decorator';
+
+@Ref(componentWatcher1, componentWatcher2, componentWatcher3)
 class MyComponent extends Component {
   render() {
     return (
