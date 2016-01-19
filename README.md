@@ -8,6 +8,10 @@
 
  > An ES7 decorator for reffing and unreffing objects (anything that implements .ref() and .unref()) in the componentWillMount() and componentWillUnmount()
 
+## Purpose
+
+The purpose of this module is to add some abbreviated syntax for hooking into a component's mount lifecycle. 
+
 ## Example
 
 Lets say you have some object that needs to be tied to the mounted portion of a React component's lifecycle:
