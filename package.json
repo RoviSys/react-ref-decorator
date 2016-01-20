@@ -1,6 +1,6 @@
 {
   "name": "react-ref-decorator",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An ES7 decorator for reffing and unreffing objects (anything that implements .ref() and .unref()) in the componentWillMount() and componentWillUnmount()",
   "main": "dist/index.js",
   "scripts": {

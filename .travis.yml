@@ -1,22 +1,22 @@
 language: node_js
 node_js:
-  - node
+- node
 sudo: false
 script:
-  - npm run test
-  - npm run coverage
-  - npm run build
+- npm run test
+- npm run coverage
+- npm run build
 after_success:
-  - npm install -g codeclimate-test-reporter
-  - codeclimate-test-reporter < coverage/lcov.info
+- npm install -g codeclimate-test-reporter
+- codeclimate-test-reporter < coverage/lcov.info
 addons:
   code_climate:
     repo_token: 6c2f65bed4a8ff50c04a9ac4c6cc3744d0ec2ddad9ef7c19e2aa4f74457562ee
 deploy:
   provider: npm
   email: stephen.austin@rovisys.com
-  skip_cleanup: true
   api_key:
-    secure: Q4/2UHycR266AMWLopIq31Um/6RS2V5QX2cA30qrgUnKqmxVBsdsrA82zOTaCTJ85zxtGsTllGzJsyG2FbLozZRDXf3eSuB2DDaOXHEynBG1x3ozvtS3FuDd+32R2utjqrGWapfszm/N+xdKDB8b8fORpfYZj1l/cxrgYMk7JjwiM8IZcbzORKqMwsG5KHJjH/NqM/PGDG5TAWOATkNKtYGdagf/gdIOKCaj9XORD+LZ79QEgsYDE/V5SSACy2fW2lIrtC+9wx4uF5aCcz6MDQQJVbY9jKjjcqLDOmbq04TcnP6tYVMeiYNcjSjj4WTEJpwgzw3mnBDPAFRdB7XdochGFncqBjcp5Va0e9EaEEcRP3ADQwMrCaMFPmoJd/7Ote3FxSnPw8O6Nc+JGWspc5l7LwrBRd89PR2vk9e0AmJfp6wzMJLLdBXMsnE4L+3lOtvyK3OBqgnobD34nojuz7uLi7NE16/b7hlOthUI7VfU1f/Ie3beQasmi90nxDM+A6gjBu0enJnMV2nRKcU6wpvoQ5j8M/5i6mkwkdaDza7uU4StTYSq5sRPAL+4f26OAc8oN7OeQQQv/EdkBVZxWM+byAV4YrAyhCyXd7LZsQKGM5NO9XU8Npo7iSHn+mikGKMEeIG2KpIQRUJsl0+DxiAi5wlRYekLCXFkSuRZAmc=
+    secure: CoMLNW6nBbchAvXnxksrJyVod5oEqWRCxrB/cAAxm5bFA7IS3+Sp/r0QMvjcrMuTkskByDu/tZp2JsB3uNZsfJBenFNMczbj80o9sPbTO96zxrdrdd7UQzfIHyC/CXeAtgiAvR7pWLOloFwtMzcMvsP7JwK0YA7IUKBMwq10k+EMB16fp3o5q/JyUvhrCP8Aup24Sfbvr71fcqiffUlbQ8BuGQ22BYXHF5IGio0M1VfAR5RedRWkLLEysOSAoi7zqnlM8rlh+X/H650ertAXAaH30up8KYACHuUMlN0cvvfLEIXNYct3sFHKybK2lfUYOLLj7ulNose76VEaQ2uovd1YhBpbemXEcw09lLAXboI3SweJ3SvAXeZhIBQI9o0GthSxKLdEPecOU/LGHooGPSCSExe3kK0XChlHe2vQe3ZByv2Nr136p164+JAeQW9pg+gCQFLuqNt5mJd47ky9WvZbKXp9e/xuPZH44ipnet1F+jrjvdRCi99D5jq2A2klWE8XGLIAQZU2Q79mihWAgnM+0bCsme+Xcyw2hjaTakL+wZPrUlmdtsBUllFHfm0QIb7IoYlqvNiSeEsWqpuJDv4LcN5OHLwSyojmQd8UOcTfwY5j/GooYsMz2iw/1ScyXQzb5DTagr5FywXV6kNuxhRgkGxxV3Sx2Eje6KhLKnA=
   on:
     tags: true
+    repo: RoviSys/react-ref-decorator
