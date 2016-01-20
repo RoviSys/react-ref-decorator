@@ -1,15 +1,17 @@
 import Ref from '../../src/';
 
 const stylesheet = {
-  ref() {
+  ref(arg) {
     this.reffed = true;
+    this.result = arg;
   } ,
-  unref() {
+  unref(arg) {
     this.reffed = false;
+    this.result = arg * 2;
   }
 };
 
-@Ref(stylesheet)
+@Ref(stylesheet, 5)
 class FakeComponent {
   constructor() {
     this.counter = 0;
@@ -38,6 +40,10 @@ describe('Ref', () => {
       expect(stylesheet.ref).to.have.been.calledOnce;
     });
 
+    it('should have processed the arg it was passed on mount', () => {
+      expect(stylesheet.result).to.be.equal(5);
+    });
+
     it('should have called the original componentWillMount function', () => {
       expect(component.counter).to.be.equal(1);
     });
@@ -45,6 +51,10 @@ describe('Ref', () => {
     it('should have been unreffed', () => {
       component.componentWillUnmount();
       expect(stylesheet.unref).to.have.been.calledOnce;
+    });
+
+    it('should have processed the arg it was passed on unmount', () => {
+      expect(stylesheet.result).to.be.equal(5 * 2);
     });
 
     it('should have called the original componentWillUnmount function', () => {
