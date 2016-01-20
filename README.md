@@ -8,6 +8,10 @@
 
  > An ES7 decorator for reffing and unreffing objects (anything that implements .ref() and .unref()) in the componentWillMount() and componentWillUnmount()
 
+## Installation
+
+Just run `npm install --save react-ref-decorator` and then use the default export of the module.
+
 ## Purpose
 
 The purpose of this module is to add some abbreviated syntax for hooking into a component's mount lifecycle. 
